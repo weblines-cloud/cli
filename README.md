@@ -34,10 +34,11 @@ Requires Node.js 18.17 or newer. No dependencies.
 
 ## CI
 
-Don't log in on a CI runner. Create an API key in **Settings → API keys** (scopes `read` and `deploy`), store it as a secret, and set `WEBLINES_TOKEN`:
+Don't log in on a CI runner (on GitHub, use [weblines-cloud/deploy-action](https://github.com/weblines-cloud/deploy-action)). Create an API key in **Settings → API keys** (scopes `read` and `deploy`), store it as a secret, and set `WEBLINES_TOKEN`:
 
 ```bash
-WEBLINES_TOKEN=$WEBLINES_TOKEN npx github:weblines-cloud/cli deploy my-app
+npm install -g github:weblines-cloud/cli#v0.1.1
+WEBLINES_TOKEN=$WEBLINES_TOKEN weblines deploy my-app
 ```
 
 ## Where things are stored
