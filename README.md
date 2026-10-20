@@ -37,7 +37,7 @@ Requires Node.js 18.17 or newer. No dependencies.
 Don't log in on a CI runner (on GitHub, use [weblines-cloud/deploy-action](https://github.com/weblines-cloud/deploy-action)). Create an API key in **Settings → API keys** (scopes `read` and `deploy`), store it as a secret, and set `WEBLINES_TOKEN`:
 
 ```bash
-npm install -g github:weblines-cloud/cli#v0.1.1
+npm install -g https://codeload.github.com/weblines-cloud/cli/tar.gz/v0.1.1
 WEBLINES_TOKEN=$WEBLINES_TOKEN weblines deploy my-app
 ```
 
