@@ -24,7 +24,7 @@ export async function api(method, path, body) {
       method,
       headers: {
         Authorization: `Bearer ${bearer}`,
-        "User-Agent": "weblines-cli/0.1",
+        "User-Agent": "weblines-cli/0.1.1",
         ...(body === undefined ? {} : { "Content-Type": "application/json" }),
       },
       body: body === undefined ? undefined : JSON.stringify(body),
@@ -39,7 +39,8 @@ export async function api(method, path, body) {
   if (!res.ok || data.ok === false) {
     const error = data.error ?? {};
     const message = error.message ?? `Request failed (${res.status})`;
-    throw new ApiError(res.status, error.code ?? "error", res.status === 401 ? `${message}. Run \`weblines login\` again.` : message);
+    const hint = envToken ? "Check the API key in WEBLINES_TOKEN (scopes read and deploy)." : "Run `weblines login` again.";
+    throw new ApiError(res.status, error.code ?? "error", res.status === 401 ? `${message}. ${hint}` : message);
   }
   return data;
 }
