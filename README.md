@@ -3,7 +3,7 @@
 Deploy and manage your services on [Weblines Cloud](https://weblines.ir) from the terminal.
 
 ```bash
-npm install -g github:weblines-cloud/cli
+npm install -g weblines
 weblines login          # opens your browser; no key to copy
 weblines ps
 cd my-app && weblines link my-app
@@ -53,7 +53,7 @@ The login is saved in `~/.config/weblines/config.json` (or `$XDG_CONFIG_HOME/web
 
 سرویس‌هایتان در [ابر وب‌لاینز](https://weblines.ir) را از ترمینال دیپلوی و مدیریت کنید.
 
-- **نصب:** `npm install -g github:weblines-cloud/cli` (Node.js نسخه‌ی ۱۸.۱۷ یا جدیدتر).
+- **نصب:** `npm install -g weblines` (Node.js نسخه‌ی ۱۸.۱۷ یا جدیدتر).
 - **ورود:** `weblines login` مرورگر را باز می‌کند؛ در کنسول تأیید کنید. کلیدی کپی نمی‌شود.
 - **دیپلوی:** در پوشه‌ی پروژه یک بار `weblines link نام-سرویس`، بعد هر بار `weblines deploy`؛ لاگِ build تا پایان نشان داده می‌شود.
 - **لاگ:** `weblines logs -f`

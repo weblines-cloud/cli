@@ -3,11 +3,29 @@
   "version": "0.1.1",
   "description": "Command line for Weblines Cloud: deploy, logs, env and lifecycle from your terminal",
   "type": "module",
-  "bin": { "weblines": "bin/weblines.js" },
-  "files": ["bin", "src", "README.md"],
-  "engines": { "node": ">=18.17" },
+  "bin": {
+    "weblines": "bin/weblines.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
   "homepage": "https://weblines.ir/docs/settings/cli",
-  "repository": { "type": "git", "url": "https://github.com/weblines-cloud/cli" },
-  "keywords": ["weblines", "paas", "deploy", "cli"],
-  "scripts": { "test": "node --test test/*.test.js" }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weblines-cloud/cli.git"
+  },
+  "keywords": [
+    "weblines",
+    "paas",
+    "deploy",
+    "cli"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
 }
